@@ -1,0 +1,7 @@
+{
+  "dialect": "sqlite",
+  "schema": "./src/server/db/schema.ts",
+  "dbCredentials": {
+    "url": "file:./data/app.db"
+  }
+}

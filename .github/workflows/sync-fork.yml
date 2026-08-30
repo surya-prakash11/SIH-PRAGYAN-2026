@@ -1,0 +1,28 @@
+﻿name: Auto Sync Fork
+
+on:
+  schedule:
+    # Runs every 5 minutes (the fastest frequency supported by GitHub Actions)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows manual instant trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync with Upstream
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git remote add upstream https://github.com/surya-prakash11/SIH-PRAGYAN-2026.git || true
+          git fetch upstream
+          git checkout main
+          git merge upstream/main -m "auto-sync: merge upstream changes from surya-prakash11/SIH-PRAGYAN-2026" || git rebase upstream/main
+          git push origin main
