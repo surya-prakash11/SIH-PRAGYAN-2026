@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import {
@@ -270,7 +270,7 @@ export function HomeView({
             <ul className="mt-3 space-y-2.5">
               {stats.recent.map((e) => {
                 const dateStr = new Date(e.createdAt).toLocaleDateString(
-                  language === "hi" ? "hi-IN" : language === "te" ? "te-IN" : "en-IN",
+                  language === "hi" ? "hi-IN" : language === "te" ? "te-IN" : language === "ta" ? "ta-IN" : "en-IN",
                   { day: "numeric", month: "short" }
                 );
                 return (

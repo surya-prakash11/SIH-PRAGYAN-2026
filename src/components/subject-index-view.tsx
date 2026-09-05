@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import {
@@ -95,7 +95,7 @@ export function SubjectIndexView({
         <div className="w-full sm:w-64">
           <div className="mb-1 flex justify-between text-[13px] font-bold text-navy-600 dark:text-slate-300">
             <span>
-              {language === "hi" ? "आपकी प्रगति" : language === "te" ? "మీ పురోగతి" : "Your progress"}
+              {language === "hi" ? "आपकी प्रगति" : language === "te" ? "మీ పురోగతి" : language === "ta" ? "உங்கள் முன்னேற்றம்" : "Your progress"}
             </span>
             <span>
               {practiced}/{dbList.length}
@@ -140,13 +140,13 @@ export function SubjectIndexView({
                         {data && data.videoCount > 0 && (
                           <span className="inline-flex items-center gap-1 rounded-sm bg-navy-50 px-1.5 py-0.5 text-[11px] font-bold text-navy-600 dark:bg-slate-800 dark:text-slate-300">
                             <Clapperboard className="h-3 w-3" /> {data.videoCount}{" "}
-                            {language === "hi" ? "वीडियो" : language === "te" ? "వీడియోలు" : "videos"}
+                            {language === "hi" ? "वीडियो" : language === "te" ? "వీడియోలు" : language === "ta" ? "வீடியோக்கள்" : "videos"}
                           </span>
                         )}
                         {data && data.noteCount > 0 && (
                           <span className="inline-flex items-center gap-1 rounded-sm bg-navy-50 px-1.5 py-0.5 text-[11px] font-bold text-navy-600 dark:bg-slate-800 dark:text-slate-300">
                             <StickyNote className="h-3 w-3" /> {data.noteCount}{" "}
-                            {language === "hi" ? "नोट्स" : language === "te" ? "నోట్స్" : "notes"}
+                            {language === "hi" ? "नोट्स" : language === "te" ? "నోట్స్" : language === "ta" ? "குறிப்புகள்" : "notes"}
                           </span>
                         )}
                         {data && data.mcqCount > 0 && (
@@ -157,12 +157,12 @@ export function SubjectIndexView({
                         {data && data.subjCount > 0 && (
                           <span className="inline-flex items-center gap-1 rounded-sm bg-saffron-50 px-1.5 py-0.5 text-[11px] font-bold text-saffron-700 dark:bg-saffron-950/60 dark:text-saffron-300">
                             <PenLine className="h-3 w-3" /> {data.subjCount}{" "}
-                            {language === "hi" ? "वर्णनात्मक" : language === "te" ? "సబ్జెక్టివ్" : "descriptive"}
+                            {language === "hi" ? "वर्णनात्मक" : language === "te" ? "సబ్జెక్టివ్" : language === "ta" ? "விளக்கமுறை" : "descriptive"}
                           </span>
                         )}
                         {!hasContent && (
                           <span className="rounded-sm bg-slate-100 px-1.5 py-0.5 text-[11px] font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-400">
-                            {language === "hi" ? "शीघ्र उपलब्ध" : language === "te" ? "త్వరలో అందుబాటులోకి వస్తుంది" : "Content coming soon"}
+                            {language === "hi" ? "शीघ्र उपलब्ध" : language === "te" ? "త్వరలో అందుబాటులోకి వస్తుంది" : language === "ta" ? "விரைவில் வரும்" : "Content coming soon"}
                           </span>
                         )}
                       </div>

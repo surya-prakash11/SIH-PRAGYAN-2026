@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  --font-sans: var(--font-mukta), "Mukta", "Noto Sans Telugu", "Gautami", "Nirmala UI", "Segoe UI", "Noto Sans", sans-serif;
-  --font-display: var(--font-deva), "Noto Serif Devanagari", "Noto Sans Telugu", "Gautami", "Mukta", serif;
+  --font-sans: var(--font-mukta), "Mukta", "Noto Sans Tamil", "Latha", "Vijaya", "Noto Sans Telugu", "Gautami", "Nirmala UI", "Segoe UI", "Noto Sans", sans-serif;
+  --font-display: var(--font-deva), "Noto Serif Devanagari", "Noto Sans Tamil", "Latha", "Vijaya", "Noto Sans Telugu", "Gautami", "Mukta", serif;
 
   --color-navy-50: #eef4f9;
   --color-navy-100: #dce8f2;

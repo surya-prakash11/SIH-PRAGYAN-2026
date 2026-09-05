@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { createContext, useContext, useEffect, useState, useTransition } from "react";
 import { type Language, type TranslationKey, getTranslation, LANGUAGES } from "@/shared/i18n";
@@ -27,7 +27,7 @@ export function LanguageProvider({
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY) as Language | null;
-      if (saved && (saved === "en" || saved === "hi" || saved === "te")) {
+      if (saved && LANGUAGES.some((l) => l.code === saved)) {
         setLanguageState(saved);
         document.documentElement.lang = saved;
       }
